@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>TWEETLIST</title>
+  <script>window.INITIAL_STATE = <%-JSON.stringify(data)%>;</script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/simple-statistics@2.2.0/dist/simple-statistics.min.js"></script>
+  <script type="text/javascript" src="/assets/js/twee.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <div id="chart"><canvas id="myChart"></canvas></div>
+  <% include ../static/assets/includes/header.ejs %>
+  <%if(data){%>
+<div id="content">
+<p>
+  <h2>Nicest Tweet:</h2><%-data.feels.nicest.text%> (score:<%-data.feels.nicest.score%>)<br />
+  <h2>Meanest Tweet:</h2><%-data.feels.meanest.text%> (score:<%-data.feels.meanest.score%>)<br />
+</p>
+<p>
+  <div id="summary"></div>
+</p>
+<p><h2>Time | Sentiment | Comparative Score:</h2>
+<%data.time.forEach((timePoint)=>{%>
+  <%-timePoint.time%> |
+  <%-timePoint.score%> |
+  <%-timePoint.comparative%><br />
+  <%});%><br />
+<p><h2>Tweets/Sentiments:</h2>
+  <%data.feels.f.forEach((tweet)=>{%>
+    <div id="tScores">
+    <%-tweet.text%><br />sentiment score:<%-tweet.sentiment.score%>, comparative score: <%-tweet.sentiment.comparative%><br />
+    <b>Positive words:</b> <%tweet.sentiment.positive.forEach((word)=>{%> <span id="positive"><%-word%></span> <%});%>
+    <b>Negative words:</b> <%tweet.sentiment.negative.forEach((word)=>{%> <span id="negative"><%-word%></span> <%});%><br />
+  </div>
+    <%}); }%></p>
+  </div>
+<p><h2>Raw JSON Data</h2></p>
+<div contenteditable="true" id="data"><%-data.rawData%></div>
+</div>
+<% include ../static/assets/includes/demoFooter.ejs %>
+</body>
+</html>

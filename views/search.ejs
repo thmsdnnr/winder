@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>SEARCH FOR IMAGES</title>
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+<body>
+  <% include ../static/assets/includes/header.ejs %>
+<div id="box">
+  <div id="contents"><h2>REWIND:<br />be kind</h2><br />
+    <form method="POST" action="/s" id="tweetSearch">
+      <p><input type="text" name="user" placeholder="Twitter Username" required autofocus id="search" autofocus><br />
+      <p><input type="number" name="ct" min="10" max="300" value="20" required>tweets (10-300)</p><br />
+      <p><input type="submit" action="Submit" value="Submit" id="submit"></p>
+    </form>
+  </div>
+</div>
+  <% include ../static/assets/includes/demoFooter.ejs %>
+</body>
+</html>

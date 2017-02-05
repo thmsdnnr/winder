@@ -1,0 +1,140 @@
+div {
+  font-family: 'Courier New', sans-serif;
+  font-size: 1em;
+}
+
+div#box {
+  margin: auto;
+  width: 300px;
+  padding: 10px;
+}
+
+div#contents {
+  margin: auto;
+  width: 200px;
+}
+
+div#nav {
+  margin: auto;
+}
+
+input {
+  height: 30px;
+  width: auto;
+  font-size: 1em;
+  font-family: 'Courier New', sans-serif;
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid gold;
+}
+
+input#submit {
+  background-color: tomato;
+  width: 220px;
+  border: 2px inset black;
+}
+
+div#chart {
+  display: inline;
+   width: 800px;
+   max-width: 800px;
+   min-width: 460px;
+   min-height: 284px;
+   height: 400px;
+   margin: 10px;
+   padding: 5px;
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
+  outline: none;
+  position: relative;
+  float:right;
+ }
+
+div#container {
+  display: block;
+  position: relative;
+  padding: 10px;
+}
+
+div#content {
+  display: inline;
+  padding: 20px;
+}
+
+div#tScores {
+  margin: 10px;
+  display: block;
+  position: relative;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+div#sumStats {
+  display: inline;
+  position: relative;
+}
+
+canvas#myChart{
+  display: inline;
+  position: relative;
+  float:right;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+ -moz-user-select: none;     /* Firefox all */
+ -ms-user-select: none;      /* IE 10+ */
+ user-select: none;
+ outline: none;
+}
+
+span#demoFooter {
+  font-family: 'Helvetica Neue', sans-serif;
+  padding: 5px;
+  font-weight: 100;
+  letter-spacing: 0.2em;
+  font-size: 1em;
+  position: fixed;
+  top: 5;
+  right: 5;
+  background-color: rgba(0,24,0,0.3);
+}
+
+a {
+  color: tomato;
+}
+
+a:hover {
+  color: white;
+}
+
+span#positive {
+  color: teal;
+}
+
+span#negative {
+  color: red;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+
+h2 {
+  font-size: 1.9em;
+}
+
+h3 {
+  font-size: 0.8em;
+}
+
+p {
+  padding: 2px;
+  margin: 0px;
+}
+
+div#data {
+  border: 3px inset gold;
+}
